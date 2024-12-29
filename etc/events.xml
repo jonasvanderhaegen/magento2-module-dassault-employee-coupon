@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_login">
+        <observer name="jvdhdassaultemployeecoupon_generate_shoppingcart_price_rule"
+                  instance="Jvdh\DassaultEmployeeCoupon\Observer\GenerateShoppingCartPriceRule"/>
+    </event>
+</config>

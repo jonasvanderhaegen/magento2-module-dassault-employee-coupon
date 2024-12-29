@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="dassaultemployeecoupon"
+                 translate="label"
+                 type="text"
+                 sortOrder="200"
+                 showInDefault="1"
+                 showInWebsite="0"
+                 showInStore="0"
+        >
+            <tab>jvdh</tab>
+            <label>Dassault employee coupon</label>
+            <resource>Jvdh_DassaultEmployeeCoupon::config_dassaultemployeecoupon</resource>
+            <group id="general"
+                   sortOrder="10"
+                   showInDefault="1"
+                   showInWebsite="0"
+                   showInStore="0"
+                   translate="label"
+            >
+                <label>General</label>
+                <field id="enabled"
+                       type="select"
+                       sortOrder="10"
+                       showInDefault="1"
+                       showInWebsite="0"
+                       showInStore="0"
+                       translate="label"
+                >
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="customer_groups" translate="label" type="multiselect" sortOrder="20" showInDefault="1">
+                    <label>Create rules for customer Groups</label>
+                    <source_model>Magento\Customer\Model\Config\Source\Group</source_model>
+                    <depends>
+                        <field id="enabled" negative="1">0</field>
+                    </depends>
+                </field>
+                <field id="discount_amount" translate="label" type="text" sortOrder="20" showInDefault="1">
+                    <label>Discount amount</label>
+                    <validate>required-entry validate-number validate-greater-than-zero</validate>
+                    <depends>
+                        <field id="enabled" negative="1">0</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

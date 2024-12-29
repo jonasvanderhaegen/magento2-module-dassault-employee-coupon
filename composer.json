@@ -1,0 +1,15 @@
+{
+    "name": "jvdh/module-dassault-employee-coupon",
+    "version": "1.0.0",
+    "description": "Generate shopping cart price rule for dassault employees",
+    "type": "magento2-module",
+    "license": "MIT",
+    "autoload": {
+        "files": [
+        "registration.php"
+        ],
+        "psr-4": {
+            "Jvdh\\DassaultEmployeeCoupon\\": ""
+        }
+    }
+}
