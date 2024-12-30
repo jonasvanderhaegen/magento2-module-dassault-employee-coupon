@@ -40,26 +40,6 @@ This module is typically placed under `app/code/Jvdh/DassaultEmployeeCoupon` wit
    - `Observer/GenerateShoppingCartPriceRule.php`  
      Listens to customer-related events (e.g., upon customer creation or save), checks if the customer is in an eligible group, and assigns a coupon code if necessary.
 
-## Installation
-To add this module to your Magento 2 project:
-
-1. **Clone the repository** into the appropriate location:
-   ```bash
-   git clone <repository_url> app/code/Jvdh/DassaultEmployeeCoupon
-   ```
-
-2. **Run Magento setup commands** to install and compile the module:
-   ```bash
-   php bin/magento setup:upgrade
-   php bin/magento setup:di:compile
-   php bin/magento cache:flush
-   ```
-
-3. **Verify that the module is enabled**:
-   ```bash
-   php bin/magento module:status Jvdh_DassaultEmployeeCoupon
-   ```
-
 ## Configuration
 The module relies on specific settings configured in the Magento admin panel:
 
